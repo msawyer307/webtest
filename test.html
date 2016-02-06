@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!-- This isn't necessary -->
+<html>
+
+<h1> This is the header </h1>
+
+<textarea id="myTextArea" rows="10" cols="30">
+Initial text goes here!
+	</textarea>
+
+<p>Testing Paragraph:</p>
+
+<p id="testing"></p>
+
+<p id="demo"></p>
+
+<script>
+	var textAreaVar = document.getElementById('myTextArea');
+	var testingParagraph = document.getElementById('testing');
+	
+	function updateTestingParagraph() {
+		var newText = textAreaVar.value;
+		newText = newText.replace(/\r?\n/g, '<br />');
+		testingParagraph.innerHTML = newText;
+	}
+	
+	textAreaVar.oninput = function(){
+			updateTestingParagraph();
+		}
+	updateTestingParagraph();
+</script>
+
+</html>
+
+
+<!-- Other code snippets:
+document.getElementById("demo").innerHTML = "This is great"; 
+
+-->

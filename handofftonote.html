@@ -2,9 +2,6 @@
 <html>
 <head>
 	<script src="parser.js"></script>
-	<script>
-		document.getElementById("myTextArea").oninput = updateTestingParagraph(document.getElementById("myTextArea"), document.getElementById("testing"));
-	</script>
 </head>
 
 <body>
@@ -17,6 +14,10 @@
 	<p>Testing Paragraph:</p>
 
 	<p id="testing"></p>
+	
+	<script>
+		document.getElementById("myTextArea").oninput = updateTestingParagraph(document.getElementById("myTextArea"), document.getElementById("testing"));
+	</script>
 
 	<p id="demo"></p>
 

@@ -16,7 +16,9 @@
 	<p id="testing"></p>
 	
 	<script>
-		document.getElementById("myTextArea").oninput = updateTestingParagraph(document.getElementById("myTextArea"), document.getElementById("testing"));
+		document.getElementById("myTextArea").oninput = function(){
+			updateTestingParagraph(document.getElementById("myTextArea"), document.getElementById("testing"));
+			}	
 	</script>
 
 	<p id="demo"></p>

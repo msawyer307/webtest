@@ -1,18 +1,28 @@
 <!DOCTYPE html> <!-- This isn't necessary -->
 <html>
+<head>
+	<script src="parser.js"></script>
+	
+	document.getElementById("myTextArea").oninput = updateTestingParagraph(document.getElementById("myTextArea"), document.getElementById("testing"));
+</head>
 
-<h1> This is the header </h1>
+<body>
+	<h1> This is the header </h1>
 
-<textarea id="myTextArea" rows="10" cols="30">
-Initial text goes here!
-	</textarea>
+	<textarea id="myTextArea" rows="10" cols="30">
+	Initial text goes here!
+		</textarea>
 
-<p>Testing Paragraph:</p>
+	<p>Testing Paragraph:</p>
 
-<p id="testing"></p>
+	<p id="testing"></p>
 
-<p id="demo"></p>
+	<p id="demo"></p>
 
+</body>
+</html>
+
+<!--
 <script>
 	var textAreaVar = document.getElementById('myTextArea');
 	var testingParagraph = document.getElementById('testing');
@@ -28,8 +38,7 @@ Initial text goes here!
 		}
 	updateTestingParagraph();
 </script>
-
-</html>
+-->
 
 
 <!-- Other code snippets:
